@@ -1,26 +1,29 @@
-<h1>Teaching Assistant</h1>
+<html (mousemove)="onMove()">
+<h1>
+  Teaching Assistant
+</h1>
 
 <h2>Alunos</h2>
 
 <table>
-  <tr>
-    <td><label>Nome </label></td>
-    <td><input [(ngModel)]="aluno.nome" /></td>
-  </tr>
-  <tr>
-    <td><label>CPF </label></td>
-    <td><input [(ngModel)]="aluno.cpf" /></td>
-  </tr>
-  <tr>
-    <td><label>e-mail </label></td>
-    <td><input [(ngModel)]="aluno.email" /></td>
-  </tr>
-  <tr>
-    <td><label>Login GitHub </label></td>
-    <td><input [(ngModel)]="aluno.github_login" /></td>
-  </tr>
-  <td><button (click)="gravar(aluno)">Adicionar</button></td>
+<tr>
+   <td><label>Nome </label></td>
+   <td><input [(ngModel)]="aluno.nome" ></td>
+   <td><button (click)="gravar(aluno)">Adicionar</button></td>
+</tr>
+<tr>
+   <td><label>CPF </label></td>
+   <td><input [(ngModel)]="aluno.cpf" ></td>
+   <td *ngIf="cpfduplicado">
+     Já existe um aluno com esse CPF
+   </td>
+</tr>
+<tr>
+   <td><label>e-mail </label></td>
+   <td><input [(ngModel)]="aluno.email" ></td>
+</tr>
 </table>
+
 
 <ul class="alunos">
   <li *ngFor="let a of alunos">
@@ -30,3 +33,4 @@
     <span>{{ a.email }}</span>
   </li>
 </ul>
+</html>
