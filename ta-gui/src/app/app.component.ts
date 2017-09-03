@@ -10,10 +10,11 @@ import { AlunoService } from './aluno.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  aluno: Aluno = { nome: '', cpf: '', email: '', github_login: '' };
-  alunoService = new AlunoService();
-  alunos: Aluno[] = [];
-  cpfduplicado: boolean = false;
+   constructor(private alunoService: AlunoService) {}
+
+   aluno: Aluno = {nome: "", cpf: "", email: "", github_login: ''};
+   alunos: Aluno[] = [];
+   cpfduplicado: boolean = false;
 
   gravar(a: Aluno): void {
     if (this.alunoService.gravar(a)) {
