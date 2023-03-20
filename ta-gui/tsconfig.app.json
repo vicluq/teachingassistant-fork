@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
+=======
+>>>>>>> 0973529c2a491c3fad0d9fd06930421833795fdb
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
@@ -6,9 +9,21 @@
     "types": []
   },
   "files": [
+<<<<<<< HEAD
     "src/main.ts"
   ],
   "include": [
     "src/**/*.d.ts"
+=======
+    "src/main.ts",
+    "src/polyfills.ts"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "src/test.ts",
+    "src/**/*.spec.ts"
+>>>>>>> 0973529c2a491c3fad0d9fd06930421833795fdb
   ]
 }
